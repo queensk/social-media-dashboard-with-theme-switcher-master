@@ -14,7 +14,12 @@
 
     <title>Frontend Mentor | Social Media Dashboard</title>
     <link rel="stylesheet" href="style.css" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,800;1,500;1,700&family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
@@ -36,157 +41,181 @@
           </div>
           <div class="head-right-section">
             <p>Dark Mode</p>
-            <p>toggle</p>
+            <label class="switch" for="dark-mode-toggle">
+              <input type="checkbox" id="dark-mode-toggle" />
+              <span class="slider round"></span>
+            </label>
           </div>
         </div>
-
         <div class="social-start-main">
-          <div>
-            <img src="./images/icon-facebook.svg" alt="" />
-            <p>@nathanf</p>
-            <p>1987</p>
-            <p>Followers</p>
-            <div>
+          <div
+            class="social-start-card social-start-card-margin-right facebook"
+          >
+            <div class="social-start-card-social">
+              <img src="./images/icon-facebook.svg" alt="" />
+              <p>@nathanf</p>
+            </div>
+            <p class="social-start-card-number">1987</p>
+            <p class="social-start-card-users">Followers</p>
+            <div class="social-start-card-upstarts">
               <img src="./images/icon-up.svg" alt="" /> <span>12 Today</span>
             </div>
           </div>
-          <div>
-            <img src="./images/icon-twitter.svg" alt="" />
-            <p>@nathanf</p>
-            <p>1044</p>
-            <p>Followers</p>
-            <div>
+          <div class="social-start-card social-start-card-margin-right twitter">
+            <div class="social-start-card-social">
+              <img src="./images/icon-twitter.svg" alt="" />
+              <p>@nathanf</p>
+            </div>
+            <p class="social-start-card-number">1044</p>
+            <p class="social-start-card-users">Followers</p>
+            <div class="social-start-card-upstarts">
               <img src="./images/icon-up.svg" alt="" /> <span>99 Today</span>
             </div>
           </div>
-          <div>
-            <img src="./images/icon-instagram.svg" alt="" />
-            <p>@realnathanf</p>
-            <p>11k</p>
-            <p>Followers</p>
-            <div>
+          <div
+            class="social-start-card social-start-card-margin-right instagram"
+          >
+            <div class="social-start-card-social">
+              <img src="./images/icon-instagram.svg" alt="" />
+              <p>@realnathanf</p>
+            </div>
+            <p class="social-start-card-number">11k</p>
+            <p class="social-start-card-users">Followers</p>
+            <div class="social-start-card-upstarts">
               <img src="./images/icon-up.svg" alt="" />
               <span>1099 Today</span>
             </div>
           </div>
-          <div>
-            <img src="./images/icon-instagram.svg" alt="" />
-            <p>Nathan F.</p>
-            <p>8239</p>
-            <p>Subscribers</p>
-            <div>
+          <div class="social-start-card social-start-card-margin-right youtube">
+            <div class="social-start-card-social">
+              <img src="./images/icon-youtube.svg" alt="" />
+              <p>Nathan F.</p>
+            </div>
+            <p class="social-start-card-number">8239</p>
+            <p class="social-start-card-users">Subscribers</p>
+            <div class="social-start-card-down-starts">
               <img src="./images/icon-down.svg" alt="" />
               <span>144 Today</span>
             </div>
           </div>
         </div>
       </section>
-      <section>
-        <div>
-          <h1>Overview - Today</h1>
-          <div>
-            <div>
-              <div>
-                <p>Page Views</p>
-                <p>87</p>
-              </div>
-              <div>
-                <img src="./images/icon-facebook.svg" alt="" />
-                <div>
-                  <img src="./images/icon-up.svg" alt="" />
-                  <span>3%</span>
-                </div>
+      <section class="main-section-daily-overview">
+        <h1 class="main-section-daily-overview-header">Overview - Today</h1>
+        <div class="main-section-daily-start">
+          <div
+            class="main-section-daily-start-card social-start-card-margin-right"
+          >
+            <div class="main-section-daily-start-data">
+              <p class="daily-start-description">Page Views</p>
+              <p class="daily-start-count">87</p>
+            </div>
+            <div class="main-section-daily-start-data">
+              <img src="./images/icon-facebook.svg" alt="" />
+              <div class="social-start-card-upstarts card-items-align-right">
+                <img src="./images/icon-up.svg" alt="" />
+                <span>3%</span>
               </div>
             </div>
-            <div>
-              <div>
-                <p>Likes</p>
-                <p>52</p>
-              </div>
-              <div>
-                <img src="./images/icon-facebook.svg" alt="" />
-                <div>
-                  <img src="./images/icon-down.svg" alt="" />
-                  <span>2%</span>
-                </div>
+          </div>
+          <div
+            class="main-section-daily-start-card social-start-card-margin-right"
+          >
+            <div class="main-section-daily-start-data">
+              <p class="daily-start-description">Likes</p>
+              <p class="daily-start-count">52</p>
+            </div>
+            <div class="main-section-daily-start-data">
+              <img src="./images/icon-facebook.svg" alt="" />
+              <div class="social-start-card-upstarts">
+                <img src="./images/icon-down.svg" alt="" />
+                <span>2%</span>
               </div>
             </div>
-            <div>
-              <div>
-                <p>Likes</p>
-                <p>5462</p>
-              </div>
-              <div>
-                <img src="./images/icon-instagram.svg" alt="" />
-                <div>
-                  <img src="./images/icon-up.svg" alt="" />
-                  <span>2257% </span>
-                </div>
+          </div>
+          <div
+            class="main-section-daily-start-card social-start-card-margin-right"
+          >
+            <div class="main-section-daily-start-data">
+              <p class="daily-start-description">Likes</p>
+              <p class="daily-start-count">5462</p>
+            </div>
+            <div class="main-section-daily-start-data">
+              <img src="./images/icon-instagram.svg" alt="" />
+              <div class="social-start-card-upstarts">
+                <img src="./images/icon-up.svg" alt="" />
+                <span>2257% </span>
               </div>
             </div>
-            <div>
-              <div>
-                <p>Profile Views</p>
-                <p>52k</p>
-              </div>
-              <div>
-                <img src="./images/icon-instagram.svg" alt="" />
-                <div>
-                  <img src="./images/icon-up.svg" alt="" />
-                  <span>1375%</span>
-                </div>
+          </div>
+          <div class="main-section-daily-start-card">
+            <div class="main-section-daily-start-data">
+              <p class="daily-start-description">Profile Views</p>
+              <p class="daily-start-count">52k</p>
+            </div>
+            <div class="main-section-daily-start-data">
+              <img src="./images/icon-instagram.svg" alt="" />
+              <div class="social-start-card-upstarts">
+                <img src="./images/icon-up.svg" alt="" />
+                <span>1375%</span>
               </div>
             </div>
-            <div>
-              <div>
-                <p>Retweets</p>
-                <p>117</p>
-              </div>
-              <div>
-                <img src="./images/icon-twitter.svg" alt="" />
-                <div>
-                  <img src="./images/icon-up.svg" alt="" />
-                  <span>303%</span>
-                </div>
+          </div>
+          <div
+            class="main-section-daily-start-card social-start-card-margin-right"
+          >
+            <div class="main-section-daily-start-data">
+              <p class="daily-start-description">Retweets</p>
+              <p class="daily-start-count">117</p>
+            </div>
+            <div class="main-section-daily-start-data">
+              <img src="./images/icon-twitter.svg" alt="" />
+              <div class="social-start-card-upstarts">
+                <img src="./images/icon-up.svg" alt="" />
+                <span>303%</span>
               </div>
             </div>
-            <div>
-              <div>
-                <p>Likes</p>
-                <p>507</p>
-              </div>
-              <div>
-                <img src="./images/icon-twitter.svg" alt="" />
-                <div>
-                  <img src="./images/icon-up.svg" alt="" />
-                  <span>553%</span>
-                </div>
+          </div>
+          <div
+            class="main-section-daily-start-card social-start-card-margin-right"
+          >
+            <div class="main-section-daily-start-data">
+              <p class="daily-start-description">Likes</p>
+              <p class="daily-start-count">507</p>
+            </div>
+            <div class="main-section-daily-start-data">
+              <img src="./images/icon-twitter.svg" alt="" />
+              <div class="social-start-card-upstarts">
+                <img src="./images/icon-up.svg" alt="" />
+                <span>553%</span>
               </div>
             </div>
-            <div>
-              <div>
-                <p>Likes</p>
-                <p>107</p>
-              </div>
-              <div>
-                <img src="./images/icon-youtube.svg" alt="" />
-                <div>
-                  <img src="./images/icon-down.svg" alt="" />
-                  <span>19%</span>
-                </div>
+          </div>
+          <div
+            class="main-section-daily-start-card social-start-card-margin-right"
+          >
+            <div class="main-section-daily-start-data">
+              <p class="daily-start-description">Likes</p>
+              <p class="daily-start-count">107</p>
+            </div>
+            <div class="main-section-daily-start-data">
+              <img src="./images/icon-youtube.svg" alt="" />
+              <div class="social-start-card-down-starts">
+                <img src="./images/icon-down.svg" alt="" />
+                <span>19%</span>
               </div>
             </div>
-            <div>
-              <div>
-                <p>Total Views</p>
-                <p>1407</p>
-              </div>
-              <div>
-                <img src="./images/icon-youtube.svg" alt="" />
-                <div>
-                  <img src="./images/icon-down.svg" alt="" />
-                  <span>12%</span>
-                </div>
+          </div>
+          <div class="main-section-daily-start-card">
+            <div class="main-section-daily-start-data">
+              <p class="daily-start-description">Total Views</p>
+              <p class="daily-start-count">1407</p>
+            </div>
+            <div class="main-section-daily-start-data">
+              <img src="./images/icon-youtube.svg" alt="" />
+              <div class="social-start-card-down-starts">
+                <img src="./images/icon-down.svg" alt="" />
+                <span>12%</span>
               </div>
             </div>
           </div>

@@ -2,13 +2,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 body {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: grid;
   justify-content: center;
   align-items: center;
+  background-color: hsl(225, 17%, 14%);
 }
 
 .main-grid-container {
@@ -16,7 +20,7 @@ body {
   grid-template-rows: auto auto;
   gap: 10px;
   width: 70vw;
-  margin: 10% 0;
+  margin: 3% 0;
 }
 
 .main-grid-container-top {
@@ -32,6 +36,11 @@ body {
 
 .head-left-section {
   grid-area: 1 / 1 / 2 / 2;
+  color: hsl(0, 0%, 100%);
+}
+
+.head-left-section h1 {
+  font-size: 2rem;
 }
 
 .head-right-section {
@@ -43,4 +52,227 @@ body {
 .social-start-main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  margin: 3% 0;
+}
+
+.main-section-daily-overview {
+}
+
+.main-section-daily-start {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.social-start-card {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: hsl(228, 28%, 20%);
+  border-radius: 5px;
+}
+.social-start-card:hover {
+  cursor: pointer;
+}
+
+.social-start-card-social {
+  display: grid;
+  grid-template-columns: repeat(2, 0.4fr);
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  color: hsl(230, 16%, 56%);
+  margin: 10% 0;
+}
+/* social-start-main */
+.social-start-card-number {
+  /* font */
+  font-size: 4rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  margin: 1% 0;
+}
+
+.social-start-card-users {
+  font-size: 1.2rem;
+  letter-spacing: 0.3rem;
+  color: hsl(230, 16%, 56%);
+}
+
+.social-start-card-upstarts {
+  color: hsl(167, 63%, 33%);
+  margin: 10% 0;
+  font-size: 0.8rem;
+}
+
+.social-start-card-down-starts {
+  color: hsl(348, 97%, 39%);
+  margin: 10% 0;
+}
+.social-start-card-down-starts span,
+.social-start-card-upstarts span {
+  font-size: 0.8rem;
+}
+
+.social-start-card-margin-right {
+  margin-right: 8%;
+}
+.social-start-card-margin-bottom {
+  margin-top: 8%;
+}
+
+.main-section-daily-start-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: space-around;
+  background-color: hsl(228, 28%, 20%);
+  /* margin: 3% 0; */
+  margin-bottom: 8%;
+  padding: 10% 0;
+  border-radius: 10px;
+}
+.main-section-daily-start-card:hover {
+  cursor: pointer;
+}
+/* daily-start-description/ */
+
+.daily-start-description {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: hsl(231, 29%, 67%);
+  margin-top: 10%;
+  width: 100%;
+}
+
+.card-items-align-right {
+  /* display: grid; */
+  align-items: flex-end;
+}
+.main-section-daily-overview-header {
+  color: hsl(0, 0%, 100%);
+  font-size: 2rem;
+  margin: 2% 0;
+}
+/* main-section-daily-overview-header */
+.main-section-daily-start-data {
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.daily-start-count {
+  font-size: 2rem;
+  font-weight: 600;
+  color: hsl(0, 0%, 100%);
+  width: 100%;
+}
+
+.head-right-section {
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  align-items: c;
+}
+.head-right-section p {
+  margin-right: 10px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.switch input[type="checkbox"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(146, 68%, 55%);
+  border-radius: 10px;
+  transition: background-color 0.4s, transform 0.4s;
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.4s ease-in-out; /* Add transition for transform property */
+}
+
+/* Add transition for the .slider:before class */
+.slider:before {
+  transition: transform 0.4s ease-in-out;
+}
+
+input[type="checkbox"]:checked + .slider {
+  background-color: hsl(210, 78%, 56%);
+  transform: translateX(16px); /* Move the slider to the right */
+}
+
+input[type="checkbox"]:checked + .slider:before {
+  transform: translateX(16px); /* Move the button to the right */
+}
+
+/* Facebook */
+.facebook {
+  border-top: 4px solid hsl(208, 92%, 70%); /* Change the border color as needed */
+}
+
+/* Twitter */
+.twitter {
+  border-top: 4px solid hsl(203, 89%, 70%); /* Change the border color as needed */
+}
+
+/* Instagram */
+/* Instagram */
+.instagram {
+  position: relative; /* Add this to make the ::before pseudo-element work */
+}
+
+.instagram::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-image: linear-gradient(
+    135deg,
+    hsl(37, 97%, 70%),
+    hsl(329, 70%, 58%)
+  );
+}
+
+/* YouTube */
+.youtube {
+  border-top: 4px solid hsl(348, 97%, 60%); /* Change the border color as needed */
+}
+
+@media screen and (min-width: 501px) and (max-width: 768px) {
+  .social-start-main {
+    display: block;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 3% 0;
+  }
 }

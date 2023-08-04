@@ -230,6 +230,10 @@ input[type="checkbox"]:checked + .slider {
   transform: translateX(16px); /* Move the slider to the right */
 }
 
+input[type="checkbox"]:checked + .slider ~ .social-start-card {
+  background-color: hsl(222, 50%, 96%);
+}
+
 input[type="checkbox"]:checked + .slider:before {
   transform: translateX(16px); /* Move the button to the right */
 }
@@ -268,11 +272,41 @@ input[type="checkbox"]:checked + .slider:before {
 .youtube {
   border-top: 4px solid hsl(348, 97%, 60%); /* Change the border color as needed */
 }
-
-@media screen and (min-width: 501px) and (max-width: 768px) {
+@media screen and (max-width: 811px) {
+  .main-grid-container {
+    width: 90vw;
+  }
+}
+@media screen and (max-width: 810px) {
   .social-start-main {
     display: block;
-    grid-template-columns: repeat(4, 1fr);
-    margin: 3% 0;
+  }
+  .main-section-daily-start {
+    display: block;
+  }
+  .attribution {
+    display: grid;
+    place-items: center;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .main-grid-container {
+    width: 100%;
+  }
+  .main-grid-container-header {
+    display: block;
+  }
+  .social-start-card-margin-right {
+    margin-right: 0;
+    margin-bottom: 7%;
+  }
+  .head-right-section {
+    color: hsl(0, 0%, 100%);
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .switch {
+    margin-right: 20px;
   }
 }
